@@ -70,6 +70,11 @@
 	            alert('Error: ' + response.data);
 	        });
 	    };
+
+	    ctrl.logout = function () {
+	        ctrl.testNote = null;
+	        AuthTokenFactory.setToken();
+	    };
 	}
 
 	var app = angular.module('app', [], function config($httpProvider) {

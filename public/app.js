@@ -21,6 +21,11 @@ function ManagerController(loginService, noteRepository, AuthTokenFactory) {
        }, function handleError(response){
            alert('Error: ' + response.data);
        })
+    };
+
+    ctrl.logout = function(){
+        ctrl.testNote = null;
+        AuthTokenFactory.setToken();
     }
 }
 

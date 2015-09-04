@@ -14,6 +14,9 @@
         <button type="submit">Login</button>
     </form>
 
+    <br/>
+    <button ng-click="managerCtrl.logout()">Logout</button>
+
     <div ng-show="(managerCtrl.token)">{{managerCtrl.token}}</div>
     <h1>Get Note:</h1>
     <button ng-click="managerCtrl.getNote()">Fetch</button>
