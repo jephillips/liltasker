@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="app">
+<div ng-controller="ManagerController as managerCtrl" style="height: 300px; width: 300px; margin: auto;">
+    <form ng-submit="managerCtrl.login(managerCtrl.username, managerCtrl.password)">
+        <label>Username: <input type="text" ng-model="managerCtrl.username"/></label>
+        <br/>
+        <label>Password: <input type="password" ng-model="managerCtrl.password"/></label>
+        <br/>
+        <button type="submit">Login</button>
+    </form>
+
+    <div ng-show="(managerCtrl.token)">{{managerCtrl.token}}</div>
+    <h1>Get Note:</h1>
+    <button ng-click="managerCtrl.getNote()">Fetch</button>
+    <pre ng-bind="managerCtrl.testNote | json"></pre>
+    <footer>/r/jstogether</footer>
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>
